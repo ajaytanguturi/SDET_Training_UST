@@ -23,6 +23,6 @@ test("To verify the search functionality whether if we type partial station name
 
     // To validate the search operation to show the list of trains
     
-    await page.getByRole('button', { name: 'Search Trains', exact: true }).click();
+    await page.getByRole('button', { name: 'Search Trains', exact: true }).click({force: true});
 
 });

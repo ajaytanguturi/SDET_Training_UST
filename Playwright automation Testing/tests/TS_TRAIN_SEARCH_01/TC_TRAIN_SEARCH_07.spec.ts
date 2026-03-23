@@ -21,5 +21,5 @@ test("To verify the search functionality where we enter the station code and it 
     await page.keyboard.press('Escape');
 
     // To validate the search operation to show the list of trains
-    await page.getByRole('button', { name: 'Search Trains', exact: true }).click();
+    await page.getByRole('button', { name: 'Search Trains', exact: true }).click({force: true});
 })

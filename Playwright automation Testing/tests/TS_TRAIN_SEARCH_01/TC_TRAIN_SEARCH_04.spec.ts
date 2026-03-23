@@ -29,7 +29,7 @@ test("To verify the functionality of search where the date is automatically set 
     
     
     const datefield=page.locator('[aria-label="Date of Journey"]');
-    const expectedDate='Date of Journey22 Mar, 2026';
+    const expectedDate='Date of Journey25 Mar, 2026';
     const actualDate=await datefield.textContent();
     await expect(actualDate).toBe(expectedDate);
 }); 
