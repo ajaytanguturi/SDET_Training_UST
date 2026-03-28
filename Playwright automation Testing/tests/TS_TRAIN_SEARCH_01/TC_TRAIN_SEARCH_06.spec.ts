@@ -25,4 +25,6 @@ test("To verify the search functionality whether if we type partial station name
     
     await page.getByRole('button', { name: 'Search Trains', exact: true }).click({force: true});
 
+    await page.waitForTimeout(5000);
+
 });

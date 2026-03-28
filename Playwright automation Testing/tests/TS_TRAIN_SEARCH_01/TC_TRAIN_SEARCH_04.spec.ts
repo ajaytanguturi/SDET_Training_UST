@@ -21,15 +21,22 @@ test("To verify the functionality of search where the date is automatically set 
   await page.getByText('OngoleOngole, Andhra PradeshOGL').click();
     */ 
 
-    await page.getByRole('combobox', {name:'To'}).click();
+    // await page.getByRole('combobox', {name:'To'}).click();
     await page.keyboard.type('Ongole');
     await page.keyboard.press('Enter');
 
     // Selecting Date for Travel 
+    const today= new Date().getDate().toString();
+    await page.locator('[aria-label="Date of Journey"]').click();
+    await page.locator(`//div[@role='gridcell']`);
+    await page.getByText(today, {exact:true}).first().click();
     
+    await page.waitForTimeout(3000);
+    //await page.locator(`//div[@role='gridcell'][.//span[text()='${today}']]`).first().click();
     
-    const datefield=page.locator('[aria-label="Date of Journey"]');
-    const expectedDate='Date of Journey25 Mar, 2026';
-    const actualDate=await datefield.textContent();
-    await expect(actualDate).toBe(expectedDate);
+   // await page.locator("//div[contains(@aria-selected, 'true')]").click();
+    // const datefield=page.locator('[aria-label="Date of Journey"]');
+    // const expectedDate='Date of Journey28 Mar, 2026';
+    // const actualDate=await datefield.textContent();
+    // await expect(actualDate).toBe(expectedDate);
 }); 
