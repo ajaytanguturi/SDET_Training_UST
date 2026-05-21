@@ -1,0 +1,27 @@
+<div style="padding:30px;">
+    <h2 style="font-size:22px; color:#0f172a; margin-bottom:24px;">Pending Employee Requests</h2>
+
+    <div *ngIf="isLoading" style="color:#64748b;">Loading...</div>
+
+    <div *ngFor="let item of requests"
+        style="background:white; border-radius:16px; padding:24px; margin-bottom:16px; box-shadow:0 4px 12px rgba(0,0,0,0.05); display:flex; justify-content:space-between; align-items:center;">
+        <div>
+            <p style="font-weight:700; color:#0f172a; font-size:16px;">{{ item.profile?.name }}</p>
+            <p style="color:#64748b; font-size:14px; margin-top:4px;">{{ item.profile?.designation }} · {{
+                item.profile?.department }}</p>
+            <p style="color:#94a3b8; font-size:13px;">{{ item.user?.personalEmail }}</p>
+        </div>
+        <div style="display:flex; gap:12px;">
+            <button (click)="approve(item.user._id)"
+                style="padding:10px 20px; border:none; border-radius:10px; background:#0f4c81; color:white; font-weight:600; cursor:pointer;">
+                Approve
+            </button>
+            <button (click)="reject(item.user._id)"
+                style="padding:10px 20px; border:none; border-radius:10px; background:#fee2e2; color:#dc2626; font-weight:600; cursor:pointer;">
+                Reject
+            </button>
+        </div>
+    </div>
+
+    <p *ngIf="!isLoading && requests.length === 0" style="color:#64748b;">No pending requests.</p>
+</div>

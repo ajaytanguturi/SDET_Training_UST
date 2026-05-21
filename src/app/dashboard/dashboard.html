@@ -1,0 +1,34 @@
+<div class="dashboard-container">
+
+  <div class="top-navbar">
+    <div class="dashboard-title">
+      HMS Dashboard
+    </div>
+
+    <div class="profile-section" (click)="goToProfile()">
+      <div class="profile-icon">
+        {{ userInitial }}
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-content">
+
+    <div class="menu-row" *ngIf="menus.length > 0">
+
+      <button class="menu-btn" *ngFor="let m of menus" [routerLink]="m.route">
+
+        {{ m.label }}
+
+      </button>
+
+    </div>
+
+    <div class="welcome">
+      <h2>Welcome {{ userName }}</h2>
+      <p>{{ role }}</p>
+    </div>
+
+  </div>
+
+</div>

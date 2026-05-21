@@ -1,0 +1,162 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+/* PAGE */
+
+.profile-page {
+
+    min-height: 100vh;
+
+    background: #f3f5f7;
+
+}
+
+
+/* NAVBAR */
+
+.profile-navbar {
+
+    height: 72px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 30px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+}
+
+.profile-navbar h2 {
+
+    font-size: 24px;
+
+    color: #0f172a;
+
+}
+
+/* CARD */
+
+.profile-card {
+
+    max-width: 900px;
+
+    margin: 40px auto;
+
+    background: white;
+
+    border-radius: 24px;
+
+    padding: 40px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+/* AVATAR */
+
+.profile-avatar {
+
+    width: 90px;
+
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #0f4c81, #1d70b8);
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+}
+
+/* NAME */
+
+.profile-card h1 {
+
+    font-size: 32px;
+
+    color: #0f172a;
+
+    margin-bottom: 10px;
+
+}
+
+/* EMPLOYEE */
+
+.employee-id {
+
+    color: #64748b;
+
+    margin-bottom: 35px;
+
+}
+
+/* GRID */
+
+.profile-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 20px;
+
+}
+
+/* DETAIL */
+
+.detail-box {
+
+    background: #f8fafc;
+
+    padding: 20px;
+
+    border-radius: 16px;
+
+    border: 1px solid #e2e8f0;
+
+}
+
+.detail-box label {
+
+    display: block;
+
+    font-size: 13px;
+
+    color: #64748b;
+
+    margin-bottom: 8px;
+
+}
+
+.detail-box span {
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #0f172a;
+
+}
